@@ -8,7 +8,7 @@ var notify = require('gulp-notify');
 /* Global Function Declarations */
 function plumbError() {
 	return plumber({
-		errorHandler: function(err) {
+		errorHandler: function (err) {
 			notify.onError({
 				templateOptions: {
 					date: new Date()
@@ -24,10 +24,10 @@ function plumbError() {
 /* Run Flask Server */
 function runFlask(done) {
 	var flaskProcess = exec('flask run');
-	flaskProcess.stdout.on('data', function(data) {
+	flaskProcess.stdout.on('data', function (data) {
 		console.log(data);
 	});
-	flaskProcess.stderr.on('data', function(data) {
+	flaskProcess.stderr.on('data', function (data) {
 		console.log(data);
 	});
 	done();
@@ -48,9 +48,10 @@ function runBSync(done) {
 }
 
 function watchFiles(params) {
-	gulp.watch('static/**/*.js').on('change', scripts);
-	gulp.watch('static/**/*.css').on('change', styles);
-	gulp.watch('templates/**/*.html').on('change', templates);
+	gulp.watch('blogr/static/**/*.js').on('change', scripts);
+	gulp.watch('blogr/static/**/*.css').on('change', styles);
+	gulp.watch('blogr/templates/**/*.html').on('change', templates);
+	gulp.watch('*.py').on('change', browserSync.reload);
 }
 
 /* function templates(e) {

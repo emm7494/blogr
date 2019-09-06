@@ -1,3 +1,13 @@
 node_modules
 __pycache__
 .direnv
+venv/
+*.pyc
+__pycache__/
+instance/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/

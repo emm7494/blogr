@@ -1,19 +1,28 @@
 {
-	"name": "gulp_live",
-	"version": "1.0.0",
-	"main": "gulpfile.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"browser-sync": "^2.26.7",
-		"gulp": "^4.0.2",
-		"gulp-cache": "^1.1.3",
-		"gulp-notify": "^3.2.0",
-		"gulp-plumber": "^1.2.1",
-		"gulp-sass": "^4.0.2"
-	},
-	"description": ""
+  "name": "gulp_live",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.3.0",
+    "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2"
+  },
+  "description": "A simple flask blog...",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emm7494/blogr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emm7494/blogr/issues"
+  },
+  "homepage": "https://github.com/emm7494/blogr#readme"
 }
