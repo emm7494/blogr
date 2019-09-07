@@ -42,7 +42,7 @@ function runBSync(done) {
 		//reloadOnRestart: false,
 		//watch: true,
 		//	files: [ 'static/**/*.css', 'static/**/*.js' ],
-		proxy: 'http://127.0.0.1:5000'
+		proxy: 'http://0.0.0.0:5000'
 	});
 	done();
 }
