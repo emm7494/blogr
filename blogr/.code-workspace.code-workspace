@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "/home/emm7494/blogr"
+		}
+	],
+	"settings": {
+		"python.pythonPath": ".direnv/python-venv-3.7.4/bin/python3.7"
+	}
+}

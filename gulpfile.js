@@ -35,9 +35,9 @@ function runFlask(done) {
 
 function runBSync(done) {
 	browserSync.init({
-		//notify: true,
+		notify: true,
 		online: false,
-		//		ws: true,
+		ws: true,
 		//		injectChanges: true,
 		//reloadOnRestart: false,
 		//watch: true,
@@ -51,7 +51,7 @@ function watchFiles(params) {
 	gulp.watch('blogr/static/**/*.js').on('change', scripts);
 	gulp.watch('blogr/static/**/*.css').on('change', styles);
 	gulp.watch('blogr/templates/**/*.html').on('change', templates);
-	gulp.watch('*.py').on('change', browserSync.reload);
+	gulp.watch('**/*.py').on('change', pyfiles);
 }
 
 /* function templates(e) {
@@ -59,18 +59,24 @@ function watchFiles(params) {
 	return gulp.src(`${e}`).pipe(browserSync.reload({ stream: true }));
 } */
 
+function pyfiles(e) {
+	console.log(e + ' pyfiles here... ' + e);
+	return gulp.src(e).pipe(plumbError()).pipe(browserSync.stream()); //.pipe(browserSync.reload({ stream: true }));
+}
+
+
 function templates(e) {
 	console.log(e + ' templates here... ' + e);
 	return gulp.src(e).pipe(plumbError()).pipe(browserSync.stream()); //.pipe(browserSync.reload({ stream: true }));
 }
 
 function styles(e) {
-	console.log(e + '  styles here...');
+	console.log(e + '  styles here...' + e);
 	return gulp.src(e).pipe(plumbError()).pipe(browserSync.stream());
 }
 
 function scripts(e) {
-	console.log(e + '  scripts here...');
+	console.log(e + '  scripts here...' + e);
 	return gulp.src(e).pipe(plumbError()).pipe(browserSync.stream());
 }
 
